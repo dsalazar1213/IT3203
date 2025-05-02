@@ -15,6 +15,11 @@
   --fs-xl:   2rem;   /* 32px */
   --lh-base: 1.5;
 
+  h1 { font-size: var(--fs-xl); margin-bottom: var(--sp-2); }
+  p  { margin-bottom: var(--sp-2); }
+  a  { color: var(--color-primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
   /* spacing */
   --sp-1: 0.5rem;
   --sp-2: 1rem;
