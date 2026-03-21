@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTTP basics including requests, responses, methods, status codes, and security.">
+  <title>HTTP and the World Wide Web | HTTP Basics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <h1>HTTP and the World Wide Web</h1>
+      <p>Understanding how requests, responses, and security work on the web.</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a id="current-page" href="http-basics.html">HTTP Basics</a></li>
+      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article class="card">
+      <h2>Request and Response Model</h2>
+      <p>
+        HTTP uses a request and response model. A client, usually a browser, sends a request for a resource. The server
+        processes that request and returns a response with content or an error message. In my research paper, I described
+        HTTP as an application layer protocol that makes structured communication possible between browsers and servers.
+        That pattern is repeated constantly while users move through websites. fileciteturn1file3L6-L20
+      </p>
+      <div class="highlight-box">
+        <strong>Simple example:</strong> A browser asks for a page, image, or script. The server answers with the requested
+        resource and a status code that tells the browser what happened.
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Common HTTP Methods</h2>
+      <ul class="key-list">
+        <li><strong>GET</strong> retrieves data from the server.</li>
+        <li><strong>POST</strong> submits data such as a form or login information.</li>
+        <li><strong>PUT</strong> updates or replaces a resource.</li>
+        <li><strong>PATCH</strong> updates part of an existing resource.</li>
+        <li><strong>DELETE</strong> removes a resource.</li>
+      </ul>
+      <p>
+        My Assignment 1 paper also explains that method permissions matter in security. If a server does not correctly
+        enforce method rules, attackers may try to update or remove resources without authorization. fileciteturn1file0L1-L8
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>Important Status Codes</h2>
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Status Code</th>
+            <th>Meaning</th>
+            <th>Why It Matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>200</td>
+            <td>Success</td>
+            <td>Shows that the request worked correctly</td>
+          </tr>
+          <tr>
+            <td>301</td>
+            <td>Moved permanently</td>
+            <td>Used for redirects</td>
+          </tr>
+          <tr>
+            <td>401</td>
+            <td>Unauthorized</td>
+            <td>Can point to failed authentication</td>
+          </tr>
+          <tr>
+            <td>403</td>
+            <td>Forbidden</td>
+            <td>Shows access was denied</td>
+          </tr>
+          <tr>
+            <td>404</td>
+            <td>Not found</td>
+            <td>Shows a missing page or file</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>Server error</td>
+            <td>Shows that something broke on the server</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Status codes are useful in both troubleshooting and security monitoring. My paper notes that repeated 401, 403,
+        or 404 responses may signal suspicious activity such as brute force attempts or reconnaissance. fileciteturn1file0L8-L18
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>Statelessness and Security</h2>
+      <p>
+        One of the most important features of HTTP is that it is stateless. That means each request stands on its own,
+        and the server does not automatically remember previous requests from the same user. Developers use cookies,
+        tokens, and session identifiers to keep track of users across multiple requests. fileciteturn1file7L1-L10
+      </p>
+      <p>
+        Statelessness is useful because it helps the web stay simple and scalable, but it also creates security concerns.
+        If an attacker steals a session identifier, that person may be able to impersonate a user. This is one reason why
+        HTTPS, secure cookies, and proper session controls are so important.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>This is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank">class website</a>.</p>
+    <p class="small-note">Diana Salazar | Kennesaw State University</p>
+  </footer>
+</body>
+</html>

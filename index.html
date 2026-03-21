@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A class project website about HTTP and the World Wide Web for IT 3203.">
+  <title>HTTP and the World Wide Web | Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared site header -->
+  <header>
+    <div class="site-title">
+      <h1>HTTP and the World Wide Web</h1>
+      <p>A simple research website for IT 3203 that explains how the web works and why HTTP matters.</p>
+    </div>
+  </header>
+
+  <!-- Main navigation used on every page -->
+  <nav>
+    <ul class="nav-list">
+      <li><a id="current-page" href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="http-basics.html">HTTP Basics</a></li>
+      <li><a href="key-concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-grid">
+      <section>
+        <article class="card">
+          <h2>Welcome</h2>
+          <p>
+            The World Wide Web is one of the most important systems in modern life. People use it for
+            school, work, shopping, healthcare, banking, and communication. Behind that everyday experience
+            is a set of technologies that allow browsers and servers to exchange information in a standard way.
+            One of the most important of those technologies is Hypertext Transfer Protocol, better known as HTTP.
+          </p>
+          <p>
+            This site introduces the relationship between HTTP and the World Wide Web. It explains how the web
+            began, how HTTP messages work, why the protocol is considered stateless, and why secure versions of
+            web communication matter so much today. The topic comes from my Assignment 1 research and is written
+            as a foundation for later project milestones. The project guide says Milestone 1 should begin from
+            the Assignment 1 research, include at least six pages, use one shared menu, and demonstrate headings,
+            lists, images, tables, and CSS styling with selectors and a grid or flex layout. fileciteturn1file8L1-L24
+          </p>
+
+          <img class="topic-image" src="images/http-web-diagram.svg" alt="Diagram showing a browser sending an HTTP request to a server and receiving an HTTP response.">
+
+          <div class="highlight-box">
+            <strong>Project focus:</strong> This website looks at how HTTP helps make the World Wide Web possible,
+            how the protocol changed over time, and why it matters in cybersecurity as well as web development.
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Key Terms</h2>
+          <ul class="key-list">
+            <li><strong>HTTP:</strong> The protocol browsers and servers use to communicate.</li>
+            <li><strong>World Wide Web:</strong> A system of linked web pages and resources accessed through browsers.</li>
+            <li><strong>Client:</strong> Usually a browser that requests data.</li>
+            <li><strong>Server:</strong> A computer system that stores and sends web resources.</li>
+            <li><strong>HTTPS:</strong> Secure HTTP that uses encryption.</li>
+            <li><strong>Status code:</strong> A number that shows the result of a request, such as 200 or 404.</li>
+          </ul>
+        </article>
+      </section>
+
+      <aside>
+        <section class="card">
+          <h2>Table of Contents</h2>
+          <ol>
+            <li><a href="history.html">History of the Web</a></li>
+            <li><a href="http-basics.html">HTTP Basics and Security</a></li>
+            <li><a href="key-concepts.html">Key Concepts</a></li>
+            <li><a href="references.html">References and Learning Resources</a></li>
+            <li><a href="about.html">About the Student and Project</a></li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2>Quick Summary</h2>
+          <p>
+            My Assignment 1 research explains that HTTP is the application layer protocol that supports
+            structured communication between clients and servers using requests and responses. It also notes
+            that HTTP is essential in cybersecurity because many common attacks and defenses involve web traffic,
+            headers, sessions, and authentication workflows. fileciteturn1file3L1-L27 fileciteturn1file4L1-L31
+          </p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>This is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank">class website</a>.</p>
+    <p class="small-note">Diana Salazar | Kennesaw State University</p>
+  </footer>
+</body>
+</html>
