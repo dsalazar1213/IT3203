@@ -11,6 +11,8 @@
         <h1>HTTP and the World Wide Web Quiz</h1>
         <p>Test your understanding of HTTP, HTTPS, browsers, servers, and status codes.</p>
     </header>
+    
+<!-- Main navigation menu -->
 
     <nav>
         <ul class="nav-menu">
@@ -26,16 +28,20 @@
 
     <main class="content-card">
         <section>
+<!-- Quiz form starts here -->
+            
             <h2>Self-Assessment Quiz</h2>
             <p>Complete the quiz below and click submit to view your results immediately.</p>
-
-            <form id="quizForm">
+            
+<!-- Question 1: Fill in the blank -->
+            
+            <form id="quizForm">             
                 <div class="quiz-question">
                     <h3>1. Fill in the blank</h3>
                     <label for="q1">HTTP stands for:</label><br>
                     <input type="text" id="q1" name="q1" placeholder="Type your answer here">
                 </div>
-
+<!-- Question 2: Multiple choice -->
                 <div class="quiz-question">
                     <h3>2. Multiple choice</h3>
                     <p>Which HTTP method is mainly used to request data from a server?</p>
@@ -43,7 +49,7 @@
                     <label><input type="radio" name="q2" value="POST"> POST</label><br>
                     <label><input type="radio" name="q2" value="DELETE"> DELETE</label>
                 </div>
-
+<!-- Question 3: Multiple choice -->
                 <div class="quiz-question">
                     <h3>3. Multiple choice</h3>
                     <p>What is the main purpose of HTTPS?</p>
@@ -51,7 +57,7 @@
                     <label><input type="radio" name="q3" value="Images"> Load images faster</label><br>
                     <label><input type="radio" name="q3" value="Storage"> Store web pages offline</label>
                 </div>
-
+<!-- Question 4: Multiple choice -->
                 <div class="quiz-question">
                     <h3>4. Multiple choice</h3>
                     <p>HTTP is described as which type of protocol?</p>
@@ -59,7 +65,7 @@
                     <label><input type="radio" name="q4" value="Stateful"> Stateful</label><br>
                     <label><input type="radio" name="q4" value="Wireless"> Wireless</label>
                 </div>
-
+<!-- Question 5: Multi-selection -->
                 <div class="quiz-question">
                     <h3>5. Multi-selection</h3>
                     <p>Select all valid HTTP status codes below:</p>
@@ -68,13 +74,13 @@
                     <label><input type="checkbox" name="q5" value="500"> 500</label><br>
                     <label><input type="checkbox" name="q5" value="999"> 999</label>
                 </div>
-
+<!-- Quiz action buttons -->
                 <div class="quiz-buttons">
                     <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
                     <button type="reset" onclick="resetResults()">Retake / Reset</button>
                 </div>
             </form>
-
+<!-- Results display section -->
             <section id="quizResults" class="results-box">
                 <h2>Results</h2>
                 <p>Your results will appear here after you submit the quiz.</p>
@@ -85,13 +91,14 @@
     <footer>
         <p>This is a class project for IT3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank">course website</a>.</p>
     </footer>
-
+    
+// Function to grade the quiz and calculate score
     <script>
         function gradeQuiz() {
             let score = 0;
             const totalQuestions = 5;
             let resultHTML = "";
-
+// Question 1: Check fill-in answer
             // Question 1
             const q1 = document.getElementById("q1").value.trim().toLowerCase();
             const q1Correct = "hypertext transfer protocol";
@@ -101,7 +108,7 @@
             } else {
                 resultHTML += "<p class='incorrect'>Question 1: Incorrect. Correct answer: HyperText Transfer Protocol</p>";
             }
-
+// Question 2: Check selected radio button
             // Question 2
             const q2 = document.querySelector('input[name="q2"]:checked');
             if (q2 && q2.value === "GET") {
@@ -110,7 +117,7 @@
             } else {
                 resultHTML += "<p class='incorrect'>Question 2: Incorrect. Correct answer: GET</p>";
             }
-
+// Question 3: Check selected radio button
             // Question 3
             const q3 = document.querySelector('input[name="q3"]:checked');
             if (q3 && q3.value === "Encryption") {
@@ -119,7 +126,7 @@
             } else {
                 resultHTML += "<p class='incorrect'>Question 3: Incorrect. Correct answer: Encrypt communication</p>";
             }
-
+// Question 4: Check selected radio button
             // Question 4
             const q4 = document.querySelector('input[name="q4"]:checked');
             if (q4 && q4.value === "Stateless") {
@@ -128,7 +135,7 @@
             } else {
                 resultHTML += "<p class='incorrect'>Question 4: Incorrect. Correct answer: Stateless</p>";
             }
-
+// Question 5: Check multiple selections
             // Question 5
             const q5Checked = document.querySelectorAll('input[name="q5"]:checked');
             const selectedValues = Array.from(q5Checked).map(item => item.value).sort();
@@ -139,7 +146,7 @@
             } else {
                 resultHTML += "<p class='incorrect'>Question 5: Incorrect. Correct answers: 200, 404, 500</p>";
             }
-
+// Determine pass or fail result
             const passFail = score >= 3 ? "PASS" : "FAIL";
             const passFailClass = score >= 3 ? "correct" : "incorrect";
 
@@ -149,7 +156,7 @@
                 "<p><strong>Total Score:</strong> " + score + " out of " + totalQuestions + "</p>" +
                 resultHTML;
         }
-
+// Reset function clears results display
         function resetResults() {
             document.getElementById("quizResults").innerHTML =
                 "<h2>Results</h2><p>Your results will appear here after you submit the quiz.</p>";
