@@ -235,3 +235,32 @@ footer {
     color: red;
     font-weight: bold;
 }
+@media (max-width: 900px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topic-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .quiz-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
